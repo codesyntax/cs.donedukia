@@ -1,8 +1,9 @@
-Changelog
-=========
+Changelog for cs.donedukia
 
-0.1 - Unreleased
-----------------
+    (name of developer listed in brackets)
 
-* Initial release
+cs.donedukia - 0.1 Unreleased
+
+    - Initial package structure.
+      [zopeskel]
 

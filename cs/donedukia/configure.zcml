@@ -16,7 +16,7 @@
       name="default"
       title="cs.donedukia"
       directory="profiles/default"
-      description="Plone version of CodeSyntax's DonEdukia product"
+      description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
