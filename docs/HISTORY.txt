@@ -7,3 +7,7 @@ cs.donedukia - 0.1 Unreleased
     - Initial package structure.
       [zopeskel]
 
+    - Initial implementation based on folder and documents
+      [erral]
+
+    - Added support for showing the contained DonEdukias.
