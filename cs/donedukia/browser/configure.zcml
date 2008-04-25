@@ -7,4 +7,19 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
+    <browser:page
+      for="..interfaces.IDonEdukia"
+      name="view"
+      class=".donedukiaview.DonEdukiaView"
+      template="donedukiaview.pt"
+      allowed_interface=".donedukiaview.IDonEdukiaView"
+      permission="zope.Public"
+    />
+
+
+    <browser:resource
+        name="don_edukia.gif"
+        file="don_edukia.gif"
+        />
+
 </configure>
