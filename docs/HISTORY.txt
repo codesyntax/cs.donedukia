@@ -2,7 +2,7 @@ Changelog for cs.donedukia
 
     (name of developer listed in brackets)
 
-cs.donedukia - 0.1 Unreleased
+cs.donedukia - 0.1 
 
     - Initial package structure.
       [zopeskel]
@@ -11,3 +11,5 @@ cs.donedukia - 0.1 Unreleased
       [erral]
 
     - Added support for showing the contained DonEdukias.
+      [erral]
+
