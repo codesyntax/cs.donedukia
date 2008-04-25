@@ -4,12 +4,15 @@ from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
 
 from cs.donedukia import donedukiaMessageFactory as _
-
+from cs.donedukia.interfaces import IDonEdukia
 
 class IDonEdukiaView(Interface):
     """
     donedukia view interface
     """
+
+    def contents():
+        """ Return the DonEdukias contained in this DonEdukia """
 
 class DonEdukiaView(BrowserView):
     """
@@ -29,3 +32,9 @@ class DonEdukiaView(BrowserView):
     def portal(self):
         return getToolByName(self.context, 'portal_url').getPortalObject()
 
+    
+    def contents(self):
+        return self.portal_catalog(object_provides=IDonEdukia.__identifier__,
+                                   path='/'.join(self.context.getPhysicalPath()),
+                                   sort_on='getObjPositionInParent',
+                                   )

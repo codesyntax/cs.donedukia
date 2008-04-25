@@ -30,29 +30,19 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                     ),
         atapi.BooleanField('tableContents',
                            required = False,
-                           languageIndependent = True,
                            widget = atapi.BooleanWidget(
                                       label= AT_(u'help_enable_table_of_contents', default=u'Table of contents'),
                                       description = AT_(u'help_enable_table_of_contents_description', default=u'If selected, this will show a table of contents at the top of the page.')
                                       ),
                            ),
-    atapi.ReferenceField('relatedItems',
-                   relationship = 'relatesTo',
-                   multiValued = True,
-                   isMetadata = True,
-                   languageIndependent = False,
-                   index = 'KeywordIndex',
-                   write_permission = ADD_PERMISSIONS['DonEdukia'],
-                   widget = ReferenceBrowserWidget(
-                      allow_search = True,
-                      allow_browse = True,
-                      show_indexes = False,
-                      force_close_on_insert = True,                     
-                      label = AT_(u'label_related_items', default=u'Related Items'),
-                      description = '',
-                      visible = {'edit' : 'visible', 'view' : 'invisible' }
-                      ),
-                   ), 
+        atapi.BooleanField('showcontents',
+                           required = False,
+                           widget = atapi.BooleanWidget(
+                                      label= _(u'label_showcontents', default=u'Show the contents?'),
+                                      description = AT_(u'help_showcontents_description', default=u'If selected, the contents of this object will be shown in a listing'),
+                                      ),
+                           ),
+
     ))
 
 # Set storage on fields copied from ATFolderSchema, making sure
@@ -62,7 +52,7 @@ DonEdukiaSchema['title'].storage = atapi.AnnotationStorage()
 DonEdukiaSchema['description'].storage = atapi.AnnotationStorage()
 
 DonEdukiaSchema.changeSchemataForField('tableContents', 'settings')
-
+DonEdukiaSchema.addField(schemata.relatedItemsField.copy())
 schemata.finalizeATCTSchema(DonEdukiaSchema, folderish=True, moveDiscussion=False)
 # finalizeATCTSchema hides relatedItems for folderish items
 DonEdukiaSchema['relatedItems'].widget.visible['edit'] = 'visible'
@@ -79,4 +69,5 @@ class DonEdukia(folder.ATFolder, document.ATDocument):
     description = atapi.ATFieldProperty('description')
     text = atapi.ATFieldProperty('text')
 
+    
 atapi.registerType(DonEdukia, PROJECTNAME)

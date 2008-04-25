@@ -44,6 +44,18 @@
     
         <div tal:replace="structure provider:plone.belowcontentbody" />
 
+        <tal:contents condition="here/getShowcontents">
+          <ul class="donedukia-contents">
+            <li tal:repeat="donedukia view/contents">
+              <a href=""
+                 tal:attributes="href donedukia/getURL"
+                 tal:content="donedukia/Title">
+                The title of the DonEdukia
+              </a>
+            </li>
+          </ul>
+
+        </tal:contents>
 
         </tal:main-macro>
     </div>
