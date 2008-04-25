@@ -42,8 +42,6 @@
             show related items if they exist
         </div>
     
-        <div tal:replace="structure provider:plone.belowcontentbody" />
-
         <tal:contents condition="here/getShowcontents">
           <ul class="donedukia-contents">
             <li tal:repeat="donedukia view/contents">
@@ -56,6 +54,8 @@
           </ul>
 
         </tal:contents>
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
 
         </tal:main-macro>
     </div>
