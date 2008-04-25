@@ -11,6 +11,9 @@ from cs.donedukia import donedukiaMessageFactory as _
 # -*- extra stuff goes here -*-
 
 class IDonEdukia(Interface):
+    """A Folderish Page"""
+
+class IDonEdukia(Interface):
     """A Folderish page"""
 
 
