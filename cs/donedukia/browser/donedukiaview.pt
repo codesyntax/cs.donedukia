@@ -47,6 +47,7 @@
 
             <p tal:condition="python: not text and is_editable"
                i18n:translate="no_body_text"
+               i18n:domain="plone"
                class="discreet">
               This item does not have any body text, click the edit tab to change it.
             </p>
