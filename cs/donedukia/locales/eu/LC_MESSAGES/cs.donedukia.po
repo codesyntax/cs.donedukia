@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-09-04 08:40+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-09-04 08:45+0000\n"
+"PO-Revision-Date: 2008-09-04 10:44+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,25 +17,20 @@ msgstr ""
 #. Default: "A Folderish Page"
 #: ./profiles/default/types/DonEdukia.xml
 msgid "A Folderish Page"
-msgstr ""
+msgstr "Karpeta jokaera duen orria"
 
 #. Default: "DonEdukia"
 #: ./profiles/default/types/DonEdukia.xml
 msgid "DonEdukia"
-msgstr ""
+msgstr "DonEdukia"
 
-#. Default: "Body Text"
-#: ./content/donedukia.py:34
-msgid "label_body_text"
-msgstr ""
-
-#. Default: "The content of this page"
-#: ./content/donedukia.py:35
-msgid "label_body_text_description"
-msgstr ""
+#. Default: "If selected, the contents of this object will be shown in a listing"
+#: ./content/donedukia.py:43
+msgid "help_showcontents_description"
+msgstr "Aukeratuta badago, elementu honen barruan dauden DonEdukiak erakutsiko dira zerrenda baten."
 
 #. Default: "Show the contents?"
 #: ./content/donedukia.py:42
 msgid "label_showcontents"
-msgstr ""
+msgstr "Edukiak erakutsi?"
 

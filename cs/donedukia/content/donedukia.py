@@ -31,8 +31,8 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                     default_content_type='text/html',
                     allowable_content_types =('text/html',),
                     default_output_type='text/x-html-safe',
-                    widget=atapi.RichWidget(label=_(u"label_body_text", default=u'Body Text'),
-                                            description=_(u"label_body_text_description", default=u'The content of this page'),
+                    widget=atapi.RichWidget(label=AT_(u"label_body_text", default=u'Body Text'),
+                                            description=AT_(u"label_body_text_description", default=u'The content of this page'),
                                             rows=25,
                                             allow_file_upload=False),
                     ),
@@ -40,7 +40,7 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                        required = False,
                        widget = atapi.BooleanWidget(
                                      label= _(u'label_showcontents', default=u'Show the contents?'),
-                                     description = AT_(u'help_showcontents_description', default=u'If selected, the contents of this object will be shown in a listing'),
+                                     description = _(u'help_showcontents_description', default=u'If selected, the contents of this object will be shown in a listing'),
                                      ),
                        ),
     

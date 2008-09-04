@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-09-04 08:40+0000\n"
-"PO-Revision-Date: 2008-09-04 10:37+0100\n"
+"POT-Creation-Date: 2008-09-04 08:45+0000\n"
+"PO-Revision-Date: 2008-09-04 10:44+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,15 +24,10 @@ msgstr "A Folderish Page"
 msgid "DonEdukia"
 msgstr "DonEdukia"
 
-#. Default: "Body Text"
-#: ./content/donedukia.py:34
-msgid "label_body_text"
-msgstr "Body Text"
-
-#. Default: "The content of this page"
-#: ./content/donedukia.py:35
-msgid "label_body_text_description"
-msgstr "The content of this page"
+#. Default: "If selected, the contents of this object will be shown in a listing"
+#: ./content/donedukia.py:43
+msgid "help_showcontents_description"
+msgstr "If selected, the contents of this object will be shown in a listing."
 
 #. Default: "Show the contents?"
 #: ./content/donedukia.py:42
