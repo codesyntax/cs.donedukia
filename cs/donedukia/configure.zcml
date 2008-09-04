@@ -1,8 +1,12 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="cs.donedukia">
+
+    <include package="Products.GenericSetup" />
+    <include package="Products.GenericSetup" file="meta.zcml" />
 
     <five:registerPackage package="." initialize=".initialize" />
 
@@ -10,13 +14,24 @@
     <include package=".browser" />
     <include package=".content" />
 
-    <!-- Register the installation GenericSetup extension profile -->
+    <!-- Register the installation GenericSetup extension profile for Plone 3 or Plone 2.5.x-->
+
     <genericsetup:registerProfile
-      name="default"
-      title="cs.donedukia"
-      directory="profiles/default"
-      description=""
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+        zcml:condition="installed zope.app.annotation.tests"
+        name="plone-2.5"
+        title="cs.donedukia for Plone 2.5"
+        directory="profiles/plone-2.5"
+        description=""
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+    <genericsetup:registerProfile
+        zcml:condition="installed zope.annotation"
+        name="default"
+        title="cs.donedukia for Plone 3"
+        directory="profiles/default"
+        description=""
+        provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
     <!-- -*- extra stuff goes here -*- -->

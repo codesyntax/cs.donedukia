@@ -3,9 +3,6 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="cs.donedukia">
 
-  <!--
-    <include package="plone.app.contentmenu" />
-    -->
     <!-- -*- extra stuff goes here -*- -->
 
     <browser:page

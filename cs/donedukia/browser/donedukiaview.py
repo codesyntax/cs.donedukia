@@ -14,6 +14,13 @@ class IDonEdukiaView(Interface):
     def contents():
         """ Return the DonEdukias contained in this DonEdukia """
 
+    def isPlone2():
+        """ Return if this is Plone 2 """
+
+    def isPlone3():
+        """ Return if this is Plone 3 """
+
+
 class DonEdukiaView(BrowserView):
     """
     donedukia browser view
@@ -38,3 +45,14 @@ class DonEdukiaView(BrowserView):
                                    path='/'.join(self.context.getPhysicalPath()),
                                    sort_on='getObjPositionInParent',
                                    )
+
+
+    def isPlone2(self):
+        from cs.donedukia.config import IS_PLONE2
+        return IS_PLONE2
+
+    def isPlone3(self):
+        from cs.donedukia.config import IS_PLONE3
+        return IS_PLONE3
+
+    
