@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2008-09-04 08:45+0000\n"
+"PO-Revision-Date: 2008-09-04 10:44+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#. Default: "A Folderish Page"
+#: ./profiles/default/types/DonEdukia.xml
+msgid "A Folderish Page"
+msgstr "A Folderish Page"
+
+#. Default: "DonEdukia"
+#: ./profiles/default/types/DonEdukia.xml
+msgid "DonEdukia"
+msgstr "DonEdukia"
+
+#. Default: "If selected, the contents of this object will be shown in a listing"
+#: ./content/donedukia.py:43
+msgid "help_showcontents_description"
+msgstr "If selected, the contents of this object will be shown in a listing."
+
+#. Default: "Show the contents?"
+#: ./content/donedukia.py:42
+msgid "label_showcontents"
+msgstr "Show contained DonEdukias?"
+

@@ -4,59 +4,78 @@
       i18n:domain="cs.donedukia">
 <body>
     <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main"
-           tal:define="kssClassesView context/@@kss_field_decorator_view;
-                       getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                       templateId template/getId;
-                       text here/getText;">
+        <tal:main-macro metal:define-macro="main">
+          <div id="donedukia"
+               tal:define="templateId template/getId;
+                           text here/getText;">
 
-        <div tal:replace="structure provider:plone.abovecontenttitle" />
+            <tal:block condition="view/isPlone2">
+              <div metal:use-macro="here/document_actions/macros/document_actions">
+                Document actions (print, sendto etc)
+              </div>
+            </tal:block>
 
-        <h1 class="documentFirstHeading"> 
-            <metal:field use-macro="python:here.widget('title', mode='view')">
-            Title
+            <tal:block condition="view/isPlone3">
+              <div tal:replace="structure provider:plone.abovecontenttitle" />
+            </tal:block>
+
+            <h1 class="documentFirstHeading"> 
+              <metal:field use-macro="python:here.widget('title', mode='view')">
+                Title
+              </metal:field>
+            </h1>
+
+            <tal:block condition="view/isPlone3">
+              <div tal:replace="structure provider:plone.belowcontenttitle" />
+            </tal:block>
+
+            <tal:block condition="view/isPlone2">
+              <div metal:use-macro="here/document_byline/macros/byline">
+		Get the byline - contains details about author and modification date.
+              </div>
+            </tal:block>
+            
+            <p class="documentDescription">
+              <metal:field use-macro="python:here.widget('description', mode='view')">
+                Description
+              </metal:field>
+            </p>
+
+            <tal:block condition="view/isPlone3">
+              <div tal:replace="structure provider:plone.abovecontentbody" />
+            </tal:block>
+
+            <p tal:condition="python: not text and is_editable"
+               i18n:translate="no_body_text"
+               i18n:domain="plone"
+               class="discreet">
+              This item does not have any body text, click the edit tab to change it.
+            </p>
+            
+            <metal:field use-macro="python:here.widget('text', mode='view')">
+              Body text
             </metal:field>
-        </h1>
 
-        <div tal:replace="structure provider:plone.belowcontenttitle" />
-
-        <p class="documentDescription">
-            <metal:field use-macro="python:here.widget('description', mode='view')">
-            Description
-            </metal:field>
-        </p>
-
-        <div tal:replace="structure provider:plone.abovecontentbody" />
-
-        <p tal:condition="python: not text and is_editable"
-           i18n:translate="no_body_text"
-           class="discreet">
-            This item does not have any body text, click the edit tab to change it.
-        </p>
-
-        <metal:field use-macro="python:here.widget('text', mode='view')">
-        Body text
-        </metal:field>
-
-        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-            show related items if they exist
-        </div>
+            <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+              show related items if they exist
+            </div>
     
-        <tal:contents condition="here/getShowcontents">
-          <ul class="donedukia-contents">
-            <li tal:repeat="donedukia view/contents">
-              <a href=""
-                 tal:attributes="href donedukia/getURL"
-                 tal:content="donedukia/Title">
-                The title of the DonEdukia
-              </a>
-            </li>
-          </ul>
-
-        </tal:contents>
-
-        <div tal:replace="structure provider:plone.belowcontentbody" />
-
+            <tal:contents condition="here/getShowcontents">
+              <ul class="donedukia-contents">
+                <li tal:repeat="donedukia view/contents">
+                  <a href=""
+                     tal:attributes="href donedukia/getURL"
+                     tal:content="donedukia/Title">
+                    The title of the DonEdukia
+                  </a>
+                </li>
+              </ul>             
+            </tal:contents>
+            
+            <tal:block condition="view/isPlone3">
+              <div tal:replace="structure provider:plone.belowcontentbody" />
+            </tal:block>
+          </div>
         </tal:main-macro>
     </div>
 </body>
