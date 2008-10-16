@@ -2,6 +2,24 @@ Changelog for cs.donedukia
 
     (name of developer listed in brackets)
 
+cs.donedukia - 0.4
+    - The icon in Plone 2.5.x should be folder_icon.gif and not
+      folder.gif because of its size.
+      [erral]
+
+    - Removed the unused attribute showContents to show the contents 
+      of the current DonEdukia. If you want to show the contents
+      register a new view. It's not so dificult :)
+      [erral]
+
+
+cs.donedukia - 0.3
+
+    - Added folder.gif as icon for DonEdukia objects in Plone 2.5 because
+      there were problems with some getattr(context, ++donedukia.gif++')
+      in some Plone templates
+      [erral]
+
 cs.donedukia - 0.2
 
     - Removed unneeded portlet information
