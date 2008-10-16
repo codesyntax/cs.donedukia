@@ -11,9 +11,6 @@ class IDonEdukiaView(Interface):
     donedukia view interface
     """
 
-    def contents():
-        """ Return the DonEdukias contained in this DonEdukia """
-
     def isPlone2():
         """ Return if this is Plone 2 """
 
@@ -40,13 +37,6 @@ class DonEdukiaView(BrowserView):
         return getToolByName(self.context, 'portal_url').getPortalObject()
 
     
-    def contents(self):
-        return self.portal_catalog(object_provides=IDonEdukia.__identifier__,
-                                   path='/'.join(self.context.getPhysicalPath()),
-                                   sort_on='getObjPositionInParent',
-                                   )
-
-
     def isPlone2(self):
         from cs.donedukia.config import IS_PLONE2
         return IS_PLONE2

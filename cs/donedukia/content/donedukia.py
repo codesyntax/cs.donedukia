@@ -36,14 +36,6 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                                             rows=25,
                                             allow_file_upload=False),
                     ),
-    atapi.BooleanField('showcontents',
-                       required = False,
-                       widget = atapi.BooleanWidget(
-                                     label= _(u'label_showcontents', default=u'Show the contents?'),
-                                     description = _(u'help_showcontents_description', default=u'If selected, the contents of this object will be shown in a listing'),
-                                     ),
-                       ),
-    
     ))
 
 if IS_PLONE3:
