@@ -2,6 +2,10 @@ Changelog for cs.donedukia
 
     (name of developer listed in brackets)
 
+cs.donedukia - 0.5
+    - Add properties and sharing tabs to Plone 2.5 profile
+      [erral]
+
 cs.donedukia - 0.4
     - The icon in Plone 2.5.x should be folder_icon.gif and not
       folder.gif because of its size.
