@@ -2,6 +2,10 @@ Changelog for cs.donedukia
 
     (name of developer listed in brackets)
 
+cs.donedukia - 0.6
+    - Add folder_listing view to DonEdukia
+      [erral]
+
 cs.donedukia - 0.5
     - Add properties and sharing tabs to Plone 2.5 profile
       [erral]
