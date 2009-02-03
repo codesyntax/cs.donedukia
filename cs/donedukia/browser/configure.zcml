@@ -30,7 +30,7 @@
         for="..interfaces.IDonEdukia"
         name="folder_listing_donedukia"
         class=".donedukiaview.DonEdukiaView"
-        template="folder_listing_donedukia25.pt"
+        template="folder_listing_donedukia_plone25.pt"
         allowed_interface=".donedukiaview.IDonEdukiaView"
         permission="zope2.View"
         />
