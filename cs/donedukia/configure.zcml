@@ -35,5 +35,8 @@
       />
 
     <!-- -*- extra stuff goes here -*- -->
-
+    <class class="cs.donedukia.content.donedukia.DonEdukia"
+         zcml:condition="installed Products.PloneFlashUpload">
+      <implements interface="Products.PloneFlashUpload.interfaces.IUploadingCapable" />
+    </class>
 </configure>
