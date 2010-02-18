@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.9'
+version = '1.0'
 
 setup(name='cs.donedukia',
       version=version,
-      description="",
+      description="Folderish pages to simplify plone page-folder story",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -29,5 +29,7 @@ setup(name='cs.donedukia',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

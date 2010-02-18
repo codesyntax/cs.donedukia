@@ -1,6 +1,12 @@
 Changelog for cs.donedukia
 
-    (name of developer listed in brackets)
+cs.donedukia - 1.0
+    - Use z3c.autoinclude to signal this is a Plone package
+      [erral]
+
+cs.donedukia - 0.8-0.9
+    - Minor changes
+      [lur, erral]
 
 cs.donedukia - 0.6
     - Add folder_listing view to DonEdukia
