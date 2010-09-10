@@ -3,6 +3,15 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="cs.donedukia">
 <body>
+  <tal:plone4 condition="view/isPlone4">
+    <metal:content-core fill-slot="content-core">
+      <metal:field use-macro="python:context.widget('text', mode='view')">
+        Body text
+      </metal:field>
+    </metal:content-core>   
+  </tal:plone4>
+
+  <tal:notplone4 condition="not:view/isPlone4">
     <div metal:fill-slot="main">
         <tal:main-macro metal:define-macro="main">
           <div id="donedukia"
@@ -66,5 +75,6 @@
           </div>
         </tal:main-macro>
     </div>
+  </tal:notplone4>
 </body>
 </html>

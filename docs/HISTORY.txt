@@ -1,5 +1,9 @@
 Changelog for cs.donedukia
 
+cs.donedukia - 1.1
+    - Adjustments to work with Plone 4
+      [erral]
+
 cs.donedukia - 1.0
     - Use z3c.autoinclude to signal this is a Plone package
       [erral]

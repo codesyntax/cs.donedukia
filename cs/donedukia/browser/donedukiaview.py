@@ -17,6 +17,9 @@ class IDonEdukiaView(Interface):
     def isPlone3():
         """ Return if this is Plone 3 """
 
+    def isPlone4():
+        """ Return if this is Plone 4 """
+
 
 class DonEdukiaView(BrowserView):
     """
@@ -44,5 +47,10 @@ class DonEdukiaView(BrowserView):
     def isPlone3(self):
         from cs.donedukia.config import IS_PLONE3
         return IS_PLONE3
+
+    def isPlone4(self):
+        from cs.donedukia.config import IS_PLONE4
+        return IS_PLONE4
+        
 
     

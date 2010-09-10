@@ -11,12 +11,13 @@ ADD_PERMISSIONS = {
 from Products.CMFPlone.utils import getFSVersionTuple
 
 version = getFSVersionTuple()
+IS_PLONE2 = False
+IS_PLONE3 = False
+IS_PLONE4 = False
+
 if version[0] == 2:
     IS_PLONE2 = True
-    IS_PLONE3 = False
 elif version[0] == 3:
-    IS_PLONE2 = False
     IS_PLONE3 = True
-else: # What!!
-    IS_PLONE2 = False
-    IS_PLONE3 = False
+elif version[0] == 4:
+    IS_PLONE4 = True
