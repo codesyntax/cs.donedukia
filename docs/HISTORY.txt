@@ -1,7 +1,7 @@
 Changelog for cs.donedukia
 
 cs.donedukia - 1.1
-    - Adjustments to work with Plone 4
+    - Adjustments in template and view to work with Plone 4
       [erral]
 
 cs.donedukia - 1.0
