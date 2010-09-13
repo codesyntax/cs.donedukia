@@ -1,17 +1,14 @@
 """Definition of the DonEdukia content type
 """
 
-from zope.interface import implements, directlyProvides
+from zope.interface import implements
 
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import folder, document
 from Products.ATContentTypes.content import schemata
-from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 
-
-from cs.donedukia import donedukiaMessageFactory as _
 from cs.donedukia.interfaces import IDonEdukia
-from cs.donedukia.config import PROJECTNAME, ADD_PERMISSIONS, IS_PLONE2, IS_PLONE3
+from cs.donedukia.config import PROJECTNAME, IS_PLONE3, IS_PLONE4
 
 
 try:
@@ -38,7 +35,7 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                     ),
     ))
 
-if IS_PLONE3:
+if IS_PLONE3 or IS_PLONE4:
     DonEdukiaSchema = DonEdukiaSchema.copy() + atapi.Schema((
     
         atapi.BooleanField('tableContents',
@@ -74,7 +71,7 @@ class DonEdukia(folder.ATFolder, document.ATDocument):
     schema = DonEdukiaSchema
 
 
-    if IS_PLONE3:
+    if IS_PLONE3 or IS_PLONE4:
         title = atapi.ATFieldProperty('title')
         description = atapi.ATFieldProperty('description')
         text = atapi.ATFieldProperty('text')

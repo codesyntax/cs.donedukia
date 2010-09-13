@@ -1,5 +1,15 @@
 Changelog for cs.donedukia
 
+cs.donedukia - 1.2
+    - Fix a bug: fieldproperties were not registered in Plone 4
+      [erral]
+
+    - Remove unused import statements
+      [erral]
+
+    - Remove deprecation warnings due to code generated for Plone 3.x by ZopeSkel
+      [erral]
+
 cs.donedukia - 1.1
     - Adjustments in template and view to work with Plone 4
       [erral]

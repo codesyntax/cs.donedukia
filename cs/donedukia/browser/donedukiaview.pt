@@ -1,16 +1,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="cs.donedukia">
 <body>
-    <metal:content-core fill-slot="content-core" tal:condition="view/isPlone4">
+
+  <tal:plone4 tal:condition="view/isPlone4">
+    <metal:content-core fill-slot="content-core">
       <metal:field use-macro="python:context.widget('text', mode='view')">
         Body text
       </metal:field>
     </metal:content-core>   
+  </tal:plone4>
 
-
-    <div metal:fill-slot="main" tal:condition="not:view/isPlone4">
+  <tal:noplone4 tal:condition="not:view/isPlone4">
+    <div metal:fill-slot="main">
         <tal:main-macro metal:define-macro="main">
           <div id="donedukia"
                tal:define="templateId template/getId;
@@ -52,7 +57,7 @@
               <div tal:replace="structure provider:plone.abovecontentbody" />
             </tal:block>
 
-            <p tal:condition="python: not text and is_editable"
+            <p tal:condition="python: not view.isPlone4() and not text and is_editable"
                i18n:translate="no_body_text"
                i18n:domain="plone"
                class="discreet">
@@ -73,6 +78,6 @@
           </div>
         </tal:main-macro>
     </div>
-
+  </tal:noplone4>
 </body>
 </html>
