@@ -28,7 +28,7 @@
     <genericsetup:registerProfile
         zcml:condition="installed zope.annotation"
         name="default"
-        title="cs.donedukia for Plone 3"
+        title="cs.donedukia for Plone 3 and 4"
         directory="profiles/default"
         description=""
         provides="Products.GenericSetup.interfaces.EXTENSION"
