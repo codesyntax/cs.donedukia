@@ -3,9 +3,6 @@ from zope.interface import implements, Interface
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
 
-from cs.donedukia import donedukiaMessageFactory as _
-from cs.donedukia.interfaces import IDonEdukia
-
 class IDonEdukiaView(Interface):
     """
     donedukia view interface
