@@ -4,80 +4,15 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="cs.donedukia">
+<head></head>
 <body>
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <metal:field use-macro="python:context.widget('text', mode='view')">
+            Body text
+        </metal:field>
+    </metal:content-core>
+</metal:content-core>
 
-  <tal:plone4 tal:condition="view/isPlone4">
-    <metal:content-core fill-slot="content-core">
-      <metal:field use-macro="python:context.widget('text', mode='view')">
-        Body text
-      </metal:field>
-    </metal:content-core>   
-  </tal:plone4>
-
-  <tal:noplone4 tal:condition="not:view/isPlone4">
-    <div metal:fill-slot="main">
-        <tal:main-macro metal:define-macro="main">
-          <div id="donedukia"
-               tal:define="templateId template/getId;
-                           text here/getText;">
-
-            <tal:block condition="view/isPlone2">
-              <div metal:use-macro="here/document_actions/macros/document_actions">
-                Document actions (print, sendto etc)
-              </div>
-            </tal:block>
-
-            <tal:block condition="view/isPlone3">
-              <div tal:replace="structure provider:plone.abovecontenttitle" />
-            </tal:block>
-
-            <h1 class="documentFirstHeading"> 
-              <metal:field use-macro="python:here.widget('title', mode='view')">
-                Title
-              </metal:field>
-            </h1>
-
-            <tal:block condition="view/isPlone3">
-              <div tal:replace="structure provider:plone.belowcontenttitle" />
-            </tal:block>
-
-            <tal:block condition="view/isPlone2">
-              <div metal:use-macro="here/document_byline/macros/byline">
-		Get the byline - contains details about author and modification date.
-              </div>
-            </tal:block>
-            
-            <p class="documentDescription">
-              <metal:field use-macro="python:here.widget('description', mode='view')">
-                Description
-              </metal:field>
-            </p>
-
-            <tal:block condition="view/isPlone3">
-              <div tal:replace="structure provider:plone.abovecontentbody" />
-            </tal:block>
-
-            <p tal:condition="python: not view.isPlone4() and not text and is_editable"
-               i18n:translate="no_body_text"
-               i18n:domain="plone"
-               class="discreet">
-              This item does not have any body text, click the edit tab to change it.
-            </p>
-            
-            <metal:field use-macro="python:here.widget('text', mode='view')">
-              Body text
-            </metal:field>
-
-            <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-              show related items if they exist
-            </div>
-    
-            <tal:block condition="view/isPlone3">
-              <div tal:replace="structure provider:plone.belowcontentbody" />
-            </tal:block>
-          </div>
-        </tal:main-macro>
-    </div>
-  </tal:noplone4>
 </body>
 </html>

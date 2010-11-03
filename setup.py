@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.3'
+version = '2.0'
 
 setup(name='cs.donedukia',
       version=version,
@@ -25,6 +25,7 @@ setup(name='cs.donedukia',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Plone >= 4.0',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

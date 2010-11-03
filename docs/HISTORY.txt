@@ -1,5 +1,12 @@
 Changelog for cs.donedukia
 
+cs.donedukia - 2.0
+    - Drop Plone 2.5 and Plone 3 support
+      [erral]
+
+    - Inherit IDonEdukia from IATDocument and IATFolder
+      [erral]
+
 cs.donedukia - 1.2
     - Fix a bug: fieldproperties were not registered in Plone 4
       [erral]

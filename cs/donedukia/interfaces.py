@@ -1,9 +1,6 @@
-from zope.interface import Interface
-
+from Products.ATContentTypes.interface import IATDocument, IATFolder
 # -*- extra stuff goes here -*-
 
-class IDonEdukia(Interface):
+class IDonEdukia(IATDocument, IATFolder):
     """A Folderish page"""
-
-
 

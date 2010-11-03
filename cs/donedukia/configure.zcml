@@ -14,21 +14,10 @@
     <include package=".browser" />
     <include package=".content" />
 
-    <!-- Register the installation GenericSetup extension profile for Plone 3 or Plone 2.5.x-->
-
-    <genericsetup:registerProfile
-        zcml:condition="installed zope.app.annotation.tests"
-        name="plone-2.5"
-        title="cs.donedukia for Plone 2.5"
-        directory="profiles/plone-2.5"
-        description=""
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
     <genericsetup:registerProfile
         zcml:condition="installed zope.annotation"
         name="default"
-        title="cs.donedukia for Plone 3 and 4"
+        title="cs.donedukia for Plone 4"
         directory="profiles/default"
         description=""
         provides="Products.GenericSetup.interfaces.EXTENSION"

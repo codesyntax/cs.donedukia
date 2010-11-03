@@ -35,7 +35,7 @@ DonEdukiaSchema = folder.ATFolderSchema.copy() + atapi.Schema((
                     ),
     ))
 
-if IS_PLONE3 or IS_PLONE4:
+
     DonEdukiaSchema = DonEdukiaSchema.copy() + atapi.Schema((
     
         atapi.BooleanField('tableContents',
@@ -54,10 +54,6 @@ if IS_PLONE3 or IS_PLONE4:
 DonEdukiaSchema['title'].storage = atapi.AnnotationStorage()
 DonEdukiaSchema['description'].storage = atapi.AnnotationStorage()
 
-if IS_PLONE3:
-    DonEdukiaSchema.changeSchemataForField('tableContents', 'settings')
-    DonEdukiaSchema.addField(schemata.relatedItemsField.copy())
-    
 schemata.finalizeATCTSchema(DonEdukiaSchema, folderish=True, moveDiscussion=False)
 # finalizeATCTSchema hides relatedItems for folderish items
 DonEdukiaSchema['relatedItems'].widget.visible['edit'] = 'visible'
@@ -70,11 +66,9 @@ class DonEdukia(folder.ATFolder, document.ATDocument):
     portal_type = "DonEdukia"
     schema = DonEdukiaSchema
 
-
-    if IS_PLONE3 or IS_PLONE4:
-        title = atapi.ATFieldProperty('title')
-        description = atapi.ATFieldProperty('description')
-        text = atapi.ATFieldProperty('text')
+    title = atapi.ATFieldProperty('title')
+    description = atapi.ATFieldProperty('description')
+    text = atapi.ATFieldProperty('text')
 
     
 atapi.registerType(DonEdukia, PROJECTNAME)

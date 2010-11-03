@@ -16,7 +16,6 @@
         />
 
     <browser:page
-        zcml:condition="installed zope.annotation"
         for="..interfaces.IDonEdukia"
         name="folder_listing_donedukia"
         class=".donedukiaview.DonEdukiaView"
@@ -24,17 +23,6 @@
         allowed_interface=".donedukiaview.IDonEdukiaView"
         permission="zope2.View"
         />
-
-    <browser:page
-        zcml:condition="installed zope.app.annotation.tests"
-        for="..interfaces.IDonEdukia"
-        name="folder_listing_donedukia"
-        class=".donedukiaview.DonEdukiaView"
-        template="folder_listing_donedukia_plone25.pt"
-        allowed_interface=".donedukiaview.IDonEdukiaView"
-        permission="zope2.View"
-        />
-
 
     <browser:resource
         name="don_edukia.gif"
