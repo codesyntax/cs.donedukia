@@ -1,7 +1,8 @@
 Changelog for cs.donedukia
 
 cs.donedukia - 2.0
-    - Drop Plone 2.5 and Plone 3 support
+    - Drop Plone 2.5 and Plone 3 support, use cs.donedukia < 2.0
+      for those Plone versions
       [erral]
 
     - Inherit IDonEdukia from IATDocument and IATFolder
