@@ -1,5 +1,9 @@
 Changelog for cs.donedukia
 
+cs.donedukia - 2.0.1
+    - Remove ZCML registration deprecation warnings
+      [erral]
+
 cs.donedukia - 2.0
     - Drop Plone 2.5 and Plone 3 support, use cs.donedukia < 2.0
       for those Plone versions
