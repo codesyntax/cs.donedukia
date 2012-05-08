@@ -13,11 +13,6 @@
             interface="..interfaces.IDonEdukia"
             />
 
-        <require
-            permission="cmf.ModifyPortalContent"
-            set_schema="..interfaces.IDonEdukia"
-            />
-
     </class>
 
 </configure>
