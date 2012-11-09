@@ -1,6 +1,11 @@
-Changelog for cs.donedukia
+CHANGELOG
+===========
 
-cs.donedukia - 2.0.2
+cs.donedukia - 2.0.2 (2012/11/9)
+----------------------------------------------
+    - Fix CHANGELOG formatting
+      [erral]
+
     - Add Plone's default Folder's available views as views
       for DonEdukia
       [erral]
@@ -9,10 +14,14 @@ cs.donedukia - 2.0.2
       [erral]
 
 cs.donedukia - 2.0.1
+-----------------------
+
     - Remove ZCML registration deprecation warnings
       [erral]
 
 cs.donedukia - 2.0
+-----------------------
+
     - Drop Plone 2.5 and Plone 3 support, use cs.donedukia < 2.0
       for those Plone versions
       [erral]
@@ -21,6 +30,8 @@ cs.donedukia - 2.0
       [erral]
 
 cs.donedukia - 1.2
+-----------------------
+
     - Fix a bug: fieldproperties were not registered in Plone 4
       [erral]
 
@@ -31,26 +42,38 @@ cs.donedukia - 1.2
       [erral]
 
 cs.donedukia - 1.1
+-----------------------
+
     - Adjustments in template and view to work with Plone 4
       [erral]
 
 cs.donedukia - 1.0
+-----------------------
+
     - Use z3c.autoinclude to signal this is a Plone package
       [erral]
 
 cs.donedukia - 0.8-0.9
+-----------------------
+
     - Minor changes
       [lur, erral]
 
 cs.donedukia - 0.6
+-----------------------
+
     - Add folder_listing view to DonEdukia
       [erral]
 
 cs.donedukia - 0.5
+-----------------------
+
     - Add properties and sharing tabs to Plone 2.5 profile
       [erral]
 
 cs.donedukia - 0.4
+-----------------------
+
     - The icon in Plone 2.5.x should be folder_icon.gif and not
       folder.gif because of its size.
       [erral]
@@ -62,6 +85,7 @@ cs.donedukia - 0.4
 
 
 cs.donedukia - 0.3
+-----------------------
 
     - Added folder.gif as icon for DonEdukia objects in Plone 2.5 because
       there were problems with some getattr(context, ++donedukia.gif++')
@@ -69,6 +93,7 @@ cs.donedukia - 0.3
       [erral]
 
 cs.donedukia - 0.2
+-----------------------
 
     - Removed unneeded portlet information
       [erral]
@@ -77,6 +102,7 @@ cs.donedukia - 0.2
       [erral]
 
 cs.donedukia - 0.1
+-----------------------
 
     - Initial package structure.
       [zopeskel]
