@@ -1,6 +1,10 @@
 Changelog for cs.donedukia
 
 cs.donedukia - 2.0.2
+    - Add Plone's default Folder's available views as views
+      for DonEdukia
+      [erral]
+
     - Fix folder_listing_donedukia.pt for Plone 4
       [erral]
 
