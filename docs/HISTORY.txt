@@ -1,8 +1,16 @@
 CHANGELOG
 ===========
 
-cs.donedukia - 2.0.2 (2012/11/9)
+cs.donedukia - 2.1 (2012/11/9)
 ----------------------------------------------
+
+    - Add DonEdukias to TinyMCE's Linkable, Folderish and containsanchors
+      resource types
+      [erral]
+
+    - Add adding permission for Site Administrators
+      [erral]
+
     - Fix CHANGELOG formatting
       [erral]
 
