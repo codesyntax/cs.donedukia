@@ -8,6 +8,7 @@ from Products.ATContentTypes.content import folder, document
 from Products.ATContentTypes.content import schemata
 
 from cs.donedukia.interfaces import IDonEdukia
+from cs.donedukia.config import PROJECTNAME
 
 
 try:
