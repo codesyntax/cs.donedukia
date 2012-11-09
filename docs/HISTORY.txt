@@ -1,5 +1,9 @@
 Changelog for cs.donedukia
 
+cs.donedukia - 2.0.2
+    - Fix folder_listing_donedukia.pt for Plone 4
+      [erral]
+
 cs.donedukia - 2.0.1
     - Remove ZCML registration deprecation warnings
       [erral]
@@ -47,7 +51,7 @@ cs.donedukia - 0.4
       folder.gif because of its size.
       [erral]
 
-    - Removed the unused attribute showContents to show the contents 
+    - Removed the unused attribute showContents to show the contents
       of the current DonEdukia. If you want to show the contents
       register a new view. It's not so dificult :)
       [erral]
@@ -68,7 +72,7 @@ cs.donedukia - 0.2
     - Added Plone 2.5.x compatibility
       [erral]
 
-cs.donedukia - 0.1 
+cs.donedukia - 0.1
 
     - Initial package structure.
       [zopeskel]
