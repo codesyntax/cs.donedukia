@@ -8,7 +8,6 @@ from Products.ATContentTypes.content import folder, document
 from Products.ATContentTypes.content import schemata
 
 from cs.donedukia.interfaces import IDonEdukia
-from cs.donedukia.config import PROJECTNAME, IS_PLONE3, IS_PLONE4
 
 
 try:
@@ -16,7 +15,7 @@ try:
 except ImportError:
     from zope.i18nmessageid import MessageFactory
     AT_ = MessageFactory('atcontenttypes')
-    
+
 DonEdukiaSchema = document.ATDocumentSchema.copy() + folder.ATFolderSchema.copy()
 
 # Set storage on fields copied from ATFolderSchema, making sure
@@ -42,5 +41,5 @@ class DonEdukia(folder.ATFolder, document.ATDocument):
     description = atapi.ATFieldProperty('description')
     text = atapi.ATFieldProperty('text')
 
-    
+
 atapi.registerType(DonEdukia, PROJECTNAME)
