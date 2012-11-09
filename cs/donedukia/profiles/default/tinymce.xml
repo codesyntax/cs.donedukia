@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+    <linkable purge="False">
+     <element value="DonEdukia"/>
+    </linkable>
+    <containsobjects purge="False">
+     <element value="DonEdukia"/>
+    </containsobjects>
+    <containsanchors purge="False">
+     <element value="DonEdukia"/>
+    </containsanchors>
+  </resourcetypes>
+</object>
